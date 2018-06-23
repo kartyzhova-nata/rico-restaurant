@@ -1,0 +1,11 @@
+#packages, libs, vendors etc.
+node_modules
+
+#IDE(s)
+.idea
+
+#generated files
+public
+
+#other
+package-lock.json
