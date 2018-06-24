@@ -2,11 +2,14 @@
   background: $bg-sub;
 }
 
+$footer-padding: 10px;
+
 .footer-content {
   @extend %wrapper;
   min-height: 100px;
-  padding: 10px 0;
+  padding: $footer-padding 0;
   color: #fff;
+  font-size: 14px;
   display: flex;
   &>* {
     flex: 0 0 33.3333%;
@@ -22,13 +25,24 @@
     font-family: "Romantique", serif;
     font-size: 70px;
     text-transform: none;
+    &::after {
+      content: '';
+      width: 100px;
+      display: inline-block;
+      height: 100%;
+      position: relative;
+      bottom: -$footer-padding;
+      margin-right: -50px;
+      background: url('/img/footer-logo.png') no-repeat bottom center;
+      background-size: contain;
+    }
   }
-  .social{
+  .social {
     &>* {
       margin-right: 15px;
     }
     img {
-      height: 50px;
+      height: 40px;
     }
   }
   .contacts {

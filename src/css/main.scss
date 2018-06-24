@@ -1,12 +1,32 @@
+.main {
+  &.page-not-found {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    .main-content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      .not-found-img {
+        margin-top: auto;
+        align-self: center;
+        max-width: 300px;
+      }
+    }
+  }
+}
+
 .main-content {
   @extend %wrapper;
   margin-top: 50px;
   margin-bottom: 50px;
-  .page-title {
+  .sub-title {
+    color: $color-title;
     text-transform: uppercase;
-    text-align: center;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
+    text-align: center;
     margin-bottom: 30px;
   }
   .products {
@@ -80,7 +100,7 @@
       }
     }
   }
-  .address {
+  .restaurant-address {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -101,24 +121,15 @@
         height: 0;
         border-bottom: 1px solid $bg-sub;
       }
-      .sub-title {
-        color: #c50a11;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 30px;
-        margin-bottom: 20px;
-        text-align: center;
-        .discount {
-          font-size: 1.5em;
-          color: $bg-main;
-          margin-left: 10px;
-          display: inline-block;
-          transform: rotate(-7deg);
-          background-color: #c50a11;
-          border-radius: 10px;
-          box-shadow: 0 0 20px #c50a11;
-          padding: 10px;
-        }
+      .discount {
+        color: $bg-main;
+        margin-left: 10px;
+        display: inline-block;
+        transform: rotate(-7deg);
+        background-color: $color-title;
+        border-radius: 10px;
+        box-shadow: 0 0 20px $color-title;
+        padding: 10px;
       }
       .action{
         display: flex;
@@ -127,7 +138,6 @@
           font-size: 18px;
           line-height: 1.5;
           padding: 30px 50px;
-          text-align: justify;
           .note {
             font-size: 0.8em;
             font-style: italic;
@@ -148,6 +158,115 @@
       }
     }
   }
-
-  
+  .delivery-content,
+  .payment-content {
+    p {
+      padding: 0 30px;
+      margin-bottom: 15px;
+    }
+  }
+  .delivery-content {
+    @extend %clearfix;
+    .delivery-image {
+      float: right;
+      max-width: 300px;
+      margin: 0 100px;
+    }
+  }
+  .payment-content {
+    @extend %clearfix;
+    img {
+      max-height: 100px;
+      margin: 0 20px;
+      float: right;
+      &:nth-of-type(2n) {
+        float: left;
+      }
+    }
+  }
+  .delivery-payment-content{
+    .orders{
+      width: 100%;
+      thead {
+        text-transform: uppercase;
+        font-weight: bold;
+        background: $bg-main-sub;
+      }
+      tr{
+        border: 1px solid $bg-sub;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+      }
+      .total-price {
+        width: 20%;
+      }
+      .price,
+      .count {
+        width: 10%;
+      }
+      .count-input {
+        width: 50px;
+        padding: 5px;
+        text-align: center;
+      }
+      .delete {
+        width: 80px;
+        padding: 0;
+        text-align: center;
+        vertical-align: middle;
+        .delete-btn {
+          color: $color-title;
+          font-size: 35px;
+          background: transparent;
+          transition: 0.5s;
+          &:hover {
+            transform: scale(1.3);
+          }
+        }
+      }
+      .summary {
+        background: #c7c7c7;
+        font-weight: bold;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      .title {
+        text-transform: uppercase;
+        margin: 30px 30px 20px;
+        font-weight: bold;
+      }
+      label {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        min-width: 400px;
+        margin:  0 0 10px 10px;
+        input {
+          width: 60%;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .submit-order {
+      background: #629e5b;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 20px;
+      margin: 10px;
+      transition: 0.5s;
+      &:hover {
+        background: #437E3D;
+      }
+      &:active {
+        background: #2d5b2d;
+      }
+    }
+  }
 }

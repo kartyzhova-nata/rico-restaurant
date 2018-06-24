@@ -1,6 +1,7 @@
 html {
-  font-size: 14px;
   font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4em;
   height: 100%;
 }
 
@@ -9,6 +10,7 @@ body {
   background: $bg-main;
   display: flex;
   flex-direction: column;
+  line-height: inherit;
   &>* {
     flex: 0 0 auto;
   }
@@ -17,10 +19,22 @@ body {
   }
 }
 
+p {
+  text-align: justify;
+}
+
 img {
   max-width: 100%;
 }
 
 button {
   cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }

@@ -19,7 +19,66 @@
 </header>
 <main class="main">
   <div class="main-content">
-    <h1>cart</h1>
+    <div class="delivery-payment-content">
+      <table class="orders" id="orders">
+        <thead>
+        <tr>
+          <th>Наименование товара</th>
+          <th>Цена</th>
+          <th>Количество</th>
+          <th>Сумма в корзине</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="order">
+          <td class="name">Пицца Гавайская</td>
+          <td class="price">150</td>
+          <td class="count">
+            <input class="count-input" type="number" value="3">
+          </td>
+          <td class="total-price">300</td>
+          <td class="delete">
+            <button class="delete-btn">&#128465</button>
+          </td>
+        </tr>
+        <tr class="order">
+          <td class="name">Пицца Гавайская</td>
+          <td class="price">150</td>
+          <td class="count">
+            <input class="count-input" type="number" value="3">
+          </td>
+          <td class="total-price">300</td>
+          <td class="delete">
+            <button class="delete-btn">&#128465</button>
+          </td>
+        </tr>
+        <tr class="summary">
+          <td class="name" colspan="3">Всего</td>
+          <td class="summary-price" colspan="2">400</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="info" id="order-form">
+        <h3 class="title">Покупатель</h3>
+        <label>Имя
+          <input class="name" name="name">
+        </label>
+        <label>Телефон
+          <input class="phone" name="phone">
+        </label>
+        <label>Сдача
+          <input class="change" name="change">
+        </label>
+        <h3 class="title">Адрес доставки</h3>
+        <label>Адрес
+          <input class="address" name="address">
+        </label>
+      </div>
+      <button class="submit-order" id="submit-order">Оформить заказ</button>
+
+    </div>
+
   </div>
 </main>
 <footer class="footer">
