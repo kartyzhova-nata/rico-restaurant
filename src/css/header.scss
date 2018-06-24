@@ -12,6 +12,7 @@
   .logo{
     font-family: 'Romantique', serif;
     font-size: 50px;
+    margin-left: 10px;
     line-height: 1.2;
   }
   .nav {
@@ -21,7 +22,8 @@
     a {
       padding: 10px;
       transition: 0.5s;
-      &:hover{
+      &:hover,
+      &.active {
         color: red;
       }
     }

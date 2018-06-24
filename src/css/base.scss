@@ -6,9 +6,7 @@ html {
 
 body {
   min-height: 100%;
-}
-
-body {
+  background: $bg-main;
   display: flex;
   flex-direction: column;
   &>* {
