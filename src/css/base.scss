@@ -1,4 +1,28 @@
 html {
   font-size: 14px;
   font-family: "Roboto", Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  &>* {
+    flex: 0 0 auto;
+  }
+  &>main {
+    flex: 1 0 auto;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
 }

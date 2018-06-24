@@ -1,0 +1,44 @@
+.main {
+  background: $bg-main;
+}
+
+.main-content {
+  @extend %wrapper;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 33%;
+    margin: 15px 0;
+    box-shadow: 2px 2px 5px #919193;
+    border-radius: 5px;
+    .product-name,
+    .price {
+      text-transform: uppercase;
+      font-size: 15px;
+      padding: 10px;
+    }
+    .price {
+      font-size: 20px;
+    }
+    img {
+      max-width: 80%;
+    }
+    .buy {
+      color: #fff;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      background: #746e6e;
+      border-radius: 5px;
+      transition: 0.5s;
+      font-size: 18px;
+      margin-bottom: 10px;
+      &:hover {
+        background: #282828;
+      }
+    }
+  }
+}

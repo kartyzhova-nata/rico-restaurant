@@ -1,0 +1,38 @@
+.footer {
+  background: $bg-sub;
+}
+
+.footer-content {
+  @extend %wrapper;
+  min-height: 100px;
+  padding: 10px 0;
+  color: #fff;
+  display: flex;
+  &>* {
+    flex: 0 0 33.3333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      border-right: 1px solid #fff;
+    }
+  }
+  .logo {
+    font-family: "Romantique", serif;
+    font-size: 70px;
+    text-transform: none;
+  }
+  .social{
+    &>* {
+      margin-right: 15px;
+    }
+    img {
+      height: 50px;
+    }
+  }
+  .contacts {
+    flex-direction: column;
+    line-height: 1.5;
+  }
+}

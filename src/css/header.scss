@@ -1,0 +1,30 @@
+.header  {
+  background: $bg-sub;
+  color: #fff;
+}
+
+.header-content {
+  @extend %wrapper;
+  display: flex;
+  //min-height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  .logo{
+    font-family: 'Romantique', serif;
+    font-size: 50px;
+    line-height: 1.2;
+  }
+  .nav {
+    display: flex;
+    font-size: 18px;
+    text-transform: uppercase;
+    a {
+      padding: 10px;
+      transition: 0.5s;
+      &:hover{
+        color: red;
+      }
+    }
+  }
+}
+
