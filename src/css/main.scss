@@ -153,6 +153,7 @@
           }
         }
         img {
+          align-self: flex-start;
           max-height: 300px;
         }
       }
@@ -187,7 +188,7 @@
       }
     }
   }
-  .delivery-payment-content{
+  .cart-content{
     .orders{
       width: 100%;
       thead {
@@ -269,6 +270,88 @@
       }
       &:active {
         background: #2d5b2d;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    .sub-title {
+      font-size: 14px;
+    }
+    .products {
+      justify-content: space-around;
+      .product {
+        flex: 1 0 250px;
+      }
+    }
+    .contacts-content {
+      &>* {
+        flex: 1 0 250px;
+      }
+      .info {
+        font-size: 20px;
+      }
+    }
+    .actions-content {
+      .action-item {
+        .discount {
+          padding: 5px;
+          margin-left: 5px;
+        }
+        .action {
+          padding-bottom: 20px;
+          .info {
+            font-size: 12px;
+            line-height: 1.3;
+            padding: 10px;
+          }
+          img {
+            max-width: 30%;
+          }
+        }
+      }
+    }
+    .delivery-content,
+    .payment-content {
+      p {
+        font-size: 12px;
+        line-height: 1.3;
+        padding: 0 10px;
+      }
+    }
+    .delivery-content {
+      .delivery-image {
+        max-width: 40%;
+        margin: 10px;
+      }
+    }
+    .payment-content {
+      img {
+        max-width: 40%;
+      }
+    }
+    .cart-content{
+      .orders {
+        font-size: 12px;
+        line-height: 1.2;
+        th, td {
+          border: 1px solid $bg-sub;
+          padding: 2px;
+        }
+        .delete {
+          .delete-btn {
+            font-size: 24px;
+          }
+        }
+      }
+      .info {
+        label {
+          min-width: 100%;
+          padding: 5px;
+          margin: 0;
+          input {
+            padding: 5px;
+          }
+        }
       }
     }
   }

@@ -46,4 +46,3 @@ function buyProduct(id) {
   cartProducts[id] = cartProducts[id] ? cartProducts[id] + 1 : 1;
   localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
 }
-

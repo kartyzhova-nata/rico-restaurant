@@ -3,10 +3,10 @@
   color: #fff;
 }
 
+
 .header-content {
   @extend %wrapper;
   display: flex;
-  //min-height: 50px;
   justify-content: space-between;
   align-items: center;
   .logo{
@@ -25,6 +25,20 @@
       &:hover,
       &.active {
         color: red;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    display: block;
+    text-align: center;
+    .logo {
+      margin: auto;
+    }
+    .nav {
+      justify-content: space-around;
+      font-size: 11px;
+      a {
+        padding: 0;
       }
     }
   }

@@ -39,14 +39,28 @@ $footer-padding: 10px;
   }
   .social {
     &>* {
-      margin-right: 15px;
+      margin-right: 10px;
     }
-    img {
-      height: 40px;
+    a {
+      flex: 0 0 auto;
+      img {
+        height: 35px;
+      }
     }
   }
   .contacts {
     flex-direction: column;
     line-height: 1.5;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    line-height: 1;
+    &>* {
+      padding: 20px 0;
+      &:not(:last-child) {
+        border: none;
+        border-bottom: 1px solid #fff;
+      }
+    }
   }
 }

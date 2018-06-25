@@ -18,7 +18,12 @@ app.use(bodyParser.json()); // парсит тело POST запроса (у GET
 
 /* Routing */
 app.get('/:page', function (req, res) {
-  res.sendFile(path.join(publicFolder, 'html', `${req.params.page}.html`));
+  const file = path.join(publicFolder, 'html', `${req.params.page}.html`);
+  if (!fs.existsSync(file)) {
+    res.sendFile(path.join(publicFolder, 'html/404.html'))
+    return;
+  }
+  res.sendFile(file);
 });
 
 
