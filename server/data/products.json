@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Пицца Rico",
+    "price": 200,
+    "image": "/img/products/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Пицца Мясная",
+    "price": 250,
+    "image": "/img/products/2.png"
+  },
+  {
+    "id": 3,
+    "name": "Пицца Куринная",
+    "price": 150,
+    "image": "/img/products/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Пицца Маргарита",
+    "price": 210,
+    "image": "/img/products/4.png"
+  },
+  {
+    "id": 5,
+    "name": "Пицца Грибная",
+    "price": 220,
+    "image": "/img/products/5.png"
+  },
+  {
+    "id": 6,
+    "name": "Пицца Авокадо",
+    "price": 190,
+    "image": "/img/products/6.png"
+  },
+  {
+    "id": 7,
+    "name": "Пицца Бекон и Шпинат",
+    "price": 170,
+    "image": "/img/products/7.png"
+  },
+  {
+    "id": 8,
+    "name": "Пицца Моцарелла",
+    "price": 260,
+    "image": "/img/products/8.png"
+  },
+  {
+    "id": 9,
+    "name": "Пицца Гавайская",
+    "price": 200,
+    "image": "/img/products/9.png"
+  },
+  {
+    "id": 10,
+    "name": "Пицца Карбонара",
+    "price": 250,
+    "image": "/img/products/10.png"
+  }
+]
